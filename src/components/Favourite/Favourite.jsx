@@ -9,8 +9,11 @@ const Favourite = () => {
     const theme = useContext(ThemeContext)
     const retrieveData = useContext(DataContext)
     
-    const filterData = retrieveData[0].filter(data => {
-        return JSON.parse(localStorage.getItem('favourites')).includes(data.id)})
+    let filterData = []
+    if(localStorage.getItem('favourites') !== null){
+        filterData = retrieveData[0].filter(data => {
+            return JSON.parse(localStorage.getItem('favourites')).includes(data.id)})
+    }
     
     if(filterData.length != 0){
         return (
