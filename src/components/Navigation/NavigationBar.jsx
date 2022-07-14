@@ -16,7 +16,7 @@ const NavigationBar = ({curTheme, setCurTheme}) => {
     }
   }
   
-  const [boolDropdown, setBoolDropdown] = useState(true)
+  const [boolDropdown, setBoolDropdown] = useState(false)
   const DropdownContainer = () => {
     if(boolDropdown === true){
       return (
